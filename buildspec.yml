@@ -7,13 +7,10 @@ phases:
   build:
     commands:
       - echo Running tests `date`
-      - yum install -y maven
-      - mvn install
-      - mvn test
   post_build:
     commands:
       - echo Building project started on `date`
-      - mvn install package
+      - mvn package
 artifacts:
   files:
     - target/my-java-app-1.0-SNAPSHOT.jar
