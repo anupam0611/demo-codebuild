@@ -3,11 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: openjdk11
-    commands:
-      yum install -y maven
-    finally:
-      - echo This always runs even if the update or install command fails 
+      java: openjdk:11
   build:
     commands:
       - echo Running tests `date`
