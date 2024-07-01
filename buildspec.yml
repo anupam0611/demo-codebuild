@@ -4,10 +4,14 @@ phases:
   install:
     runtime-versions:
       java: corretto11
+  commands:
+    - echo installing maven...
+    - yum update -y
+    - yum install -y maven
   build:
     commands:
       - echo Running tests `date`
-      - mvn clean install
+      - mvn install
   post_build:
     commands:
       - echo Building project started on `date`
