@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  build:
+    commands:
+      - echo Running tests `date`
+      - mvn test 
+  post_build:
+    commands:
+      - echo Building project started on `date`
+      - mvn install package
+artifacts:
+  files:
+    - target/my-java-app-1.0-SNAPSHOT.jar
