@@ -14,18 +14,18 @@ permissions:
 
 hooks:
   BeforeInstall:
-    - location: install_dependencies.sh
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: ubuntu
   ApplicationStop:
-    - location: stop.sh
+    - location: scripts/stop.sh
       timeout: 20
       runas: ubuntu
   ApplicationStart:
-    - location: start.sh
+    - location: scripts/start.sh
       timeout: 20
       runas: ubuntu
   ValidateService:
-    - location: validate.sh
+    - location: scripts/validate.sh
       timeout: 20
       runas: ubuntu
