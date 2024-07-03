@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -x
-APP_HOME="/home/ec2-user/server2"
+APP_HOME="/home/ubuntu/anupam"
 ifAppRunning=`pgrep java`
 if [[ -n  $ifAppRunning ]]; then
    sudo killall java 
