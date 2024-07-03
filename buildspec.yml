@@ -18,5 +18,4 @@ phases:
       - mvn package
 artifacts:
   files:
-    - appspec.yml
-    - scripts/*
+    - **/*
