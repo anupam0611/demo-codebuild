@@ -14,7 +14,7 @@ phases:
       - mvn install
   post_build:
     commands:
-      - echo Building project started on `date`
+      - echo Building project started on `test`
       - mvn package
 artifacts:
   files:
